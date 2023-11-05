@@ -1,18 +1,12 @@
 [
     {
-        "title": "Test Title",
-        "text": "Test text"
-    },
-    {
-        "title": "hey",
-        "text": "there"
-    },
-    {
-        "title": "hello",
-        "text": "there"
+        "title": "monday",
+        "text": "hello",
+        "id": "7f52208d-1b42-4c16-8c31-0b76330c8652"
     },
     {
         "title": "friday",
-        "text": "sure"
+        "text": "sure",
+        "id": "d5ab1983-7f8b-461c-bc3d-67bb6bd3cf5e"
     }
 ]
