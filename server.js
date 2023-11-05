@@ -11,5 +11,5 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.listen(PORT, () =>
-    console.log(`Server on port ${PORT}`)
+    console.log(`Server on port http://localhost:${PORT}`)
 );
