@@ -1,6 +1,4 @@
 const router = require('express').Router();
-const path = require('path');
-const fs = require('fs');
 const { readFromFile, writeToFile, readAndAppend } = require('../helpers/fsUtils');
 const { v4: uuidv4 } = require('uuid');
 
@@ -28,13 +26,13 @@ router.delete('/api/notes/:id', (req, res) => {
     readFromFile('db/db.json')
       .then((data) => JSON.parse(data))
       .then((json) => {
-        // Make a new array of all notes except the one with the ID provided in the URL
+        // MAKE a new array of all notes except the one with the ID provided
         const result = json.filter((note) => note.id !== deleteId);
   
-        // Save that array to the filesystem
+        // SAVE that array to the db.json
         writeToFile('db/db.json', result);
   
-        // Respond to the DELETE request
+        // Log DELETE request
         res.json(`Note ID ${deleteId} has been deleted`);
       });
   });
